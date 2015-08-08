@@ -30,7 +30,7 @@ find -name '*.dylib' -print -delete
 find -name '*.jar' -print -delete
 
 %build
-#Disble tests, since of them are releated to JNI
+#Disble tests, since many of them are releated to JNI
 %mvn_build -f
 
 %install
