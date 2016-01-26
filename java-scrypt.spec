@@ -1,11 +1,11 @@
 Name: java-scrypt
 Version: 1.4.0
-Release: 1%{?dist}
+Release: 2%{?dist}
 Summary: Java implementation of scrypt
 
 License: ASL 2.0
 URL: http://github.com/wg/scrypt
-Source0: https://github.com/wg/scrypt/archive/1.4.0.tar.gz
+Source0: https://github.com/wg/scrypt/archive/%{version}.tar.gz#/%{name}-%{version}.tar.gz
 Patch0: no-jni.patch
 BuildArch: noarch
 
@@ -41,9 +41,11 @@ find -name '*.jar' -print -delete
 %license LICENSE
 
 %files javadoc -f .mfiles-javadoc
-%doc README
 %license LICENSE
 
 %changelog
+* Tue Jan 26 2016 Jonny Heggheim <hegjon@gmail.com> - 1.4.0-2
+- Minor refactor of spec file
+
 * Sat Aug 08 2015 Jonny Heggheim <hegjon@gmail.com> - 1.4.0-1
 - Inital packaging
